@@ -1,0 +1,22 @@
+import random
+number = random.randint(1, 10)
+ 
+playerName = input("Hi, what is your name? : ")
+num_of_guess = 0
+print('Ok '+playerName+ ' I have chosen a number between 1 - 10, can u guess it : ')
+
+while num_of_guess <5:
+    guess = int(input())
+    num_of_guess +=1
+    if guess < number:
+        print('Your guess is too low')
+        # break
+    if guess > number:
+        print(' Your guess is too high') 
+        # break
+if guess == number:
+    print('Congratulations You guessed the number in ' + str(num_of_guess) + ' tries!')
+
+else :
+    print('OOPS! You did not guess the number, The number was ' + str(number))
+# please check this code
